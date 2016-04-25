@@ -1,0 +1,38 @@
+<main id='home-page'>
+<h2>{{title}}</h2>
+
+
+  <table class="u-full-width">
+    <tr>
+      <th></th>
+      <th ng-repeat="coins in ['LTC', 'DASH', 'PPC']">{{coins}}</th>
+    </tr>
+    <tr>
+      <th>Poloniex</th>
+      <td ng-repeat="(k, v) in exchanges.polo"><a target='_blank' href="https://poloniex.com/exchange#{{k}}">{{v}}</a></td>
+    </tr>
+    <tr>
+      <th>Bter</th>
+      <td ng-repeat="(k, v) in exchanges.bter"><a target='_blank' href="https://bter.com/trade/{{k}}">{{v}}</a></td>
+    </tr>
+    <tr>
+      <th>BtcE</th>
+
+      <td ng-repeat="(k, v) in exchanges.btce">
+        <span ng-if="v === null">Not a pair</span>
+        <a ng-if="v !== null" target='_blank' href="https://btc-e.com/exchange/{{k}}">{{v}}</a>
+      </td>
+    </tr>
+  </table>
+
+
+<h3>Wallets for the following coins can be found below:</h3>
+<p>
+   <a target='_blank' href="https://litecoin.org/">LTC</a>
+   <a target='_blank' href="https://peercoin.net/">PPC</a>
+   <a target='_blank' href="https://www.dash.org">DASH</a>
+</p>
+
+
+
+</main>
