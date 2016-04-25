@@ -27,7 +27,7 @@ build/Release
 node_modules
 src
 webpack.config.js
-bundle.js
+public/bundle.js
 
 # Debug log from npm
 npm-debug.log
