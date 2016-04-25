@@ -10,18 +10,15 @@ angular.module('app', ['ui.router'])
 
       ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) => {
 
-      $httpProvider.defaults.useXDomain = true;
 
-      require('./style/main.scss')
+        require('./style/main.scss')
 
-      $stateProvider
-        .state ('/', configHome() )
+        $stateProvider
+          .state('/', configHome())
 
-      $urlRouterProvider.otherwise('/');
-      $locationProvider.html5Mode(true);
-    }
+        $urlRouterProvider.otherwise('/');
+        $locationProvider.html5Mode(true);
+      }
 
     ]
-  ).run(function ($http){
-    $http.defaults.headers.common = {'Accept' : 'application/json, text/plain, */*, gzip'}
-  });
+  );
