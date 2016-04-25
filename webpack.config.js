@@ -15,8 +15,9 @@ const config = {
   devtool: !PROD ? 'cheap-module-source-map' : null,
   devServer: {
     headers: {
-        "Access-Control-Allow-Origin": "*"
-      },
+      "Access-Control-Allow-Origin": "http://localhost:8080",
+      "Access-Control-Allow-Credentials": "true"
+    },
     contentBase: "public",
     historyApiFallback: {
       index: '/index.html'
