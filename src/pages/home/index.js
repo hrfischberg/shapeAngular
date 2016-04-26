@@ -7,7 +7,8 @@ export default () => {
   }
 }
 
-const homeController = (['$scope', '$http', '$interval', '$q', ($scope, $http, $interval, $q) => {
+const homeController = (['$scope', '$http', '$interval', '$q',
+  ($scope, $http, $interval, $q) => {
 
   function makeAPICall() {
     $http.get('https://shapeshiftnode.herokuapp.com/api/v1/get-coins').then(function(response) {
