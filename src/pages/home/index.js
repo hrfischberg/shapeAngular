@@ -8,10 +8,10 @@ export default () => {
 }
 
 const homeController = (['$scope', '$http', '$interval', '$q', ($scope, $http, $interval, $q) => {
-  $interval(function (){
+  // $interval(function (){
     console.log('Update');
-    $http.get('http://localhost:3001/api/v1/get-coins').then(function(response) {
+    $http.get('https://shapeshiftnode.herokuapp.com/api/v1/get-coins').then(function(response) {
       $scope.exchanges = response.data;
     });
-  }, 2000);
+  // }, 2000);
 }]);
