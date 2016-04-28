@@ -22,19 +22,20 @@ const homeController = (['$scope', '$http', '$interval', '$q', '$timeout',
       makeAPICall()
     }, 5000);
 
-    $scope.changeOccurring = false;
+    //TODO MAKE PRICE UPDATE FLASH COLOR
+    // $scope.changeOccurring = false;
 
-    $scope.$watch("exchanges", function(newValue, oldValue) {
-      console.log(newValue, oldValue);
+    // $scope.$watch("exchanges", function(newValue, oldValue) {
+    //   console.log(newValue, oldValue);
 
-      if (oldValue && newValue !== oldValue) {
-        $scope.changeOccurring = true;
-        $timeout(function() {
+    //   if (oldValue && newValue !== oldValue) {
+    //     $scope.changeOccurring = true;
+    //     $timeout(function() {
 
-          $scope.changeOccurring = false;
-        }, 500);
-        console.log('Change happened');
-      }
-    });
+    //       $scope.changeOccurring = false;
+    //     }, 500);
+    //     console.log('Change happened');
+      // }
+    // });
   }
 ]);
