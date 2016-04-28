@@ -10,8 +10,9 @@
     </tr>
     <tr>
       <th>Poloniex</th>
+      <td ng-class="changeOccurring ? 'change' : ''" ng-cloak ng-repeat="(k, v) in exchanges.polo">
         <span class="noCoin" ng-if="v === null">Not a pair</span>
-        <td ng-class="changeOccurring ? 'change' : ''" ng-cloak ng-repeat="(k, v) in exchanges.polo"><a target='_blank' href="https://poloniex.com/exchange#{{k}}">{{v}}</a></td>
+        <a target='_blank' href="https://poloniex.com/exchange#{{k}}">{{v}}</a></td>
     </tr>
     <tr>
       <th>Bter</th>

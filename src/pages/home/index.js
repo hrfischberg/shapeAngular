@@ -7,7 +7,7 @@ export default () => {
   }
 }
 
-const homeController = (['$scope', '$http', '$interval', '$q','$timeout',
+const homeController = (['$scope', '$http', '$interval', '$q', '$timeout',
   ($scope, $http, $interval, $q, $timeout) => {
 
     function makeAPICall() {
@@ -29,9 +29,9 @@ const homeController = (['$scope', '$http', '$interval', '$q','$timeout',
 
       if (oldValue && newValue !== oldValue) {
         $scope.changeOccurring = true;
-        $timeout(function(){
+        $timeout(function() {
 
-                $scope.changeOccurring = false;
+          $scope.changeOccurring = false;
         }, 500);
         console.log('Change happened');
       }
